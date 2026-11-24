@@ -1,2 +1,2 @@
 # Microservices
-using mediatr and crqs with vertical architecture 
+Using Mediatr and CQRS with vertical architecture 
