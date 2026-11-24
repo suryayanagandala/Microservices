@@ -56,6 +56,8 @@ services:
 
   identity.api:
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger:4317"
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=IdentityDb;User Id=sa;Password=SolarPassword123!;TrustServerCertificate=True"
@@ -70,6 +72,8 @@ services:
 
   notifications.api:
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger:4317"
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=NotificationsDb;User Id=sa;Password=SolarPassword123!;TrustServerCertificate=True"
@@ -84,6 +88,8 @@ services:
 
   products.api:
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger:4317"
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ConnectionStrings__DefaultConnection: "Host=products-db;Port=5432;Database=category_db;Username=postgres;Password=postgres"
@@ -98,6 +104,8 @@ services:
 
   cart.api:
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger:4317"
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ConnectionStrings__Database: "Host=cart-db;Port=5432;Database=CartDb;Username=postgres;Password=postgres"
@@ -113,6 +121,8 @@ services:
 
   orders.api:
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger:4317"
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ConnectionStrings__Database: "Host=orders-db;Port=5432;Database=OrdersDb;Username=postgres;Password=postgres"
@@ -128,6 +138,8 @@ services:
 
   payments.api:
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger:4317"
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ConnectionStrings__Database: "Host=payments-db;Port=5432;Database=PaymentsDb;Username=postgres;Password=postgres"
@@ -143,6 +155,8 @@ services:
 
   invoices.api:
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger:4317"
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ConnectionStrings__Database: "Host=invoices-db;Port=5432;Database=InvoicesDb;Username=postgres;Password=postgres"
@@ -157,6 +171,8 @@ services:
 
   solar.api.gateway:
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger:4317"
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: 8080
       ReverseProxy__Clusters__identity-cluster__Destinations__identity-api__Address: "http://identity.api:8080/"

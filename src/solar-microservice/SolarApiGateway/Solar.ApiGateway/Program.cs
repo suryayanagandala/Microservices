@@ -1,4 +1,7 @@
+using BuildingBlocks.Observability.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSolarObservability(builder.Configuration, "solar-api-gateway");
 
 builder.Services
     .AddReverseProxy()

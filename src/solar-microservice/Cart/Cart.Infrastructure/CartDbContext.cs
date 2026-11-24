@@ -1,4 +1,5 @@
-﻿using Cart.CoreModels.Entities;
+using Cart.CoreModels.Entities;
+using Cart.Infrastructure.Inbox;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace Cart.Infrastructure
 
         public virtual DbSet<CartItem> CartItems { get; set; }
 
+        public DbSet<InboxMessage> InboxMessages => Set<InboxMessage>();
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CartDbContext).Assembly);
@@ -26,3 +29,4 @@ namespace Cart.Infrastructure
         }
     }
 }
+

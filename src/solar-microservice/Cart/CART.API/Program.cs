@@ -1,3 +1,5 @@
+using BuildingBlocks.Resilience.DependencyInjection;
+using BuildingBlocks.Observability.DependencyInjection;
 using BuildingBloacks.Behaviour;
 using BuildingBlocks.Authentication_.Jwt;
 using BuildingBlocks.Messaging.DependencyInjection;
@@ -10,6 +12,7 @@ using Cart.BusinessLayer.Features.AddToCart;
 using Cart.Infrastructure;
 using Cart.Infrastructure.Persistance;
 using Cart.Infrastructure.Repositories;
+using Cart.Infrastructure.Inbox;
 using Cart.Infrastructure.Respositories;
 using CART.API.Hubs;
 using Carter;
@@ -18,6 +21,8 @@ using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSolarObservability(builder.Configuration, "cart-api");
 
 // Add services to the container.
 
@@ -34,6 +39,7 @@ builder.Services.AddDbContext<CartDbContext>(options =>
 
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IInboxStore, InboxStore>();
 
 builder.Services.AddScoped<ICartRepository, CartRepository>();
 
@@ -66,7 +72,7 @@ var catalogUrl = builder.Configuration["Services:Catalog"];
 builder.Services.AddHttpClient<IProductService, ProductService>(client =>
 {
   client.BaseAddress=new Uri(catalogUrl?? "http://localhost:7003/products/");
-});
+}).AddSolarStandardResilience();
 
 builder.Services.AddIntegrationEvent<
     OrderPaidIntegrationEvent,
@@ -141,4 +147,5 @@ static async Task ApplyMigrationsAsync(WebApplication app)
         }
     }
 }
+
 

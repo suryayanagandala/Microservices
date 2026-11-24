@@ -1,4 +1,11 @@
 services:
+  jaeger:
+    image: jaegertracing/all-in-one:1.62.0
+    container_name: solar-jaeger
+    restart: unless-stopped
+    ports:
+      - "4317:4317"
+      - "16686:16686"
   rabbitmq:
     image: rabbitmq:3-management
     container_name: solar-rabbitmq

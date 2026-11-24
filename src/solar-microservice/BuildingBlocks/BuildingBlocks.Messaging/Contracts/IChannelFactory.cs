@@ -1,14 +1,8 @@
-﻿using RabbitMQ.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RabbitMQ.Client;
 
-namespace BuildingBlocks.Messaging.Contracts
+namespace BuildingBlocks.Messaging.Contracts;
+
+public interface IChannelFactory
 {
-    public interface IChannelFactory
-    {
-        Task<IChannel> CreateChannelAsync();
-    }
+    Task<IChannel> CreateChannelAsync(CreateChannelOptions? options = null);
 }

@@ -1,3 +1,4 @@
+using BuildingBlocks.Observability.DependencyInjection;
 using BuildingBloacks.Behaviour;
 using BuildingBlocks.Authentication_.Jwt;
 using BuildingBlocks.Messaging.DependencyInjection;
@@ -12,6 +13,8 @@ using Identity.DbAccessLayer.Infrastructure;
 using Identity.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSolarObservability(builder.Configuration, "identity-api");
 
 
 //register iservice collection service from building blocks

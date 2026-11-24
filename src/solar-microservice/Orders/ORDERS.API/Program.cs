@@ -1,3 +1,5 @@
+using BuildingBlocks.Resilience.DependencyInjection;
+using BuildingBlocks.Observability.DependencyInjection;
 using BuildingBloacks.Behaviour;
 using BuildingBlocks.Authentication_.Jwt;
 using BuildingBlocks.Exceptions.Exceptions;
@@ -16,11 +18,14 @@ using Orders.CoreModels.Dto_s;
 using Orders.Infrastructure;
 using Orders.Infrastructure.Repositories;
 using Orders.Infrastructure.Services;
+using Orders.Infrastructure.Outbox;
 using ORDERS.API.Extensions;
 using ORDERS.API.Hubs;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSolarObservability(builder.Configuration, "orders-api");
 
 builder.Services.AddDbContext<OrdersDbContext>(options =>
 {
@@ -35,6 +40,8 @@ builder.Services.AddDbContext<OrdersDbContext>(options =>
 
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IOutboxWriter, OutboxWriter>();
+builder.Services.AddHostedService<OutboxPublisher>();
 builder.Services.AddScoped<IOrderNotificationService, OrderNotificationService>();
 
 var productsUrl = builder.Configuration["Services:Products"];
@@ -42,7 +49,7 @@ var productsUrl = builder.Configuration["Services:Products"];
 builder.Services.AddHttpClient<IProductService, ProductService>(client =>
 {
     client.BaseAddress = new Uri(productsUrl ?? "http://localhost:7003");
-});
+}).AddSolarStandardResilience();
 
 builder.Services.AddIntegrationEvent<CartCheckedOutIntegrationEvent,CartCheckedOutIntegrationEventHandler>(
         QueueNames.Order,RoutingKeys.Carts.CheckOut);
@@ -142,3 +149,4 @@ static async Task ApplyMigrationsAsync(WebApplication app)
         }
     }
 }
+

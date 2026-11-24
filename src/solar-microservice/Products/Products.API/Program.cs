@@ -1,3 +1,4 @@
+using BuildingBlocks.Observability.DependencyInjection;
 using BuildingBloacks.Behaviour;
 using BuildingBlocks.Authentication_.Jwt;
 using BuildingBlocks.Contracts.Events;
@@ -16,6 +17,8 @@ using System;
 using BuildingBlocks.Messaging.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSolarObservability(builder.Configuration, "products-api");
 
 //register pstgre
 builder.Services.AddDbContext<ProductDbContext>(options =>

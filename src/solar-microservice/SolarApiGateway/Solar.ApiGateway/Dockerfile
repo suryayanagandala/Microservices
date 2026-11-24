@@ -12,6 +12,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["SolarApiGateway/Solar.ApiGateway/Solar.ApiGateway.csproj", "SolarApiGateway/Solar.ApiGateway/"]
+COPY ["BuildingBlocks/BuildingBlocks.Observability/BuildingBlocks.Observability.csproj", "BuildingBlocks/BuildingBlocks.Observability/"]
 RUN dotnet restore "./SolarApiGateway/Solar.ApiGateway/Solar.ApiGateway.csproj"
 COPY . .
 WORKDIR "/src/SolarApiGateway/Solar.ApiGateway"

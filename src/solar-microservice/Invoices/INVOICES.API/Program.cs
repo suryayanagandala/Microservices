@@ -1,3 +1,4 @@
+using BuildingBlocks.Observability.DependencyInjection;
 using BuildingBlocks.Authentication_.Jwt;
 using BuildingBlocks.Messaging.DependencyInjection;
 using BuildingBlocks.Utility;
@@ -7,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSolarObservability(builder.Configuration, "invoices-api");
 
 builder.Services.AddDbContext<InvoicesDbContext>(options =>
 {

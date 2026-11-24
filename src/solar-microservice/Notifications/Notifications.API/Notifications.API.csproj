@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -8,7 +7,6 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\BuildingBlocks\BuildingBloacks.Behaviour\BuildingBloacks.Behaviour.csproj" />
     <ProjectReference Include="..\..\BuildingBlocks\BuildingBlocks.Authentication,\BuildingBlocks.Authentication.csproj" />
@@ -17,11 +15,11 @@
     <ProjectReference Include="..\Notifications.ApplicationLayer\Notifications.ApplicationLayer.csproj" />
     <ProjectReference Include="..\Notifications.BusinessLayer\Notifications.BusinessLayer.csproj" />
     <ProjectReference Include="..\Notifications.DbAccessLayer\Notifications.DbAccessLayer.csproj" />
-	  <PackageReference Include="Carter" Version="8.0.0" />
-	  <PackageReference Include="FluentValidation" Version="12.1.1" />
-	  <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
-	  <PackageReference Include="Minio" Version="7.0.0" />
+    <PackageReference Include="Carter" Version="8.0.0" />
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Minio" Version="7.0.0" />
+    <ProjectReference Include="..\..\BuildingBlocks\BuildingBlocks.Observability\BuildingBlocks.Observability.csproj" />
   </ItemGroup>
-
 </Project>

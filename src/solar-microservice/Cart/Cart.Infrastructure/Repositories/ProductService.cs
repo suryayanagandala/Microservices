@@ -1,4 +1,4 @@
-﻿using BuildingBlocks.Exceptions.Exceptions;
+using BuildingBlocks.Exceptions.Exceptions;
 using Cart.ApplicationLayer.Interfaces;
 using Cart.CoreModels.Dto_s;
 using System;
@@ -23,7 +23,7 @@ namespace Cart.Infrastructure.Repositories
 
         public async Task<ProductDto?> GetProductByIdAsync(int productId, CancellationToken cancellationToken)
         {
-            var response = await _httpClient.GetAsync($"/products/cart/{productId}");
+            var response = await _httpClient.GetAsync($"/products/cart/{productId}", cancellationToken);
 
             if (!response.IsSuccessStatusCode)
             {

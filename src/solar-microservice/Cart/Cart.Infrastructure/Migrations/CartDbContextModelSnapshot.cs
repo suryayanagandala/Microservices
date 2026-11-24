@@ -94,6 +94,30 @@ namespace Cart.Infrastructure.Migrations
                     b.ToTable("Cart", (string)null);
                 });
 
+            modelBuilder.Entity("Cart.Infrastructure.Inbox.InboxMessage", b =>
+                {
+                    b.Property<Guid>("EventId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("EventType")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("character varying(512)");
+
+                    b.Property<DateTimeOffset>("ProcessedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTimeOffset>("ReceivedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("EventId");
+
+                    b.HasIndex("ProcessedAt");
+
+                    b.ToTable("inbox_messages", (string)null);
+                });
+
             modelBuilder.Entity("Cart.CoreModels.Entities.CartItem", b =>
                 {
                     b.HasOne("Cart.CoreModels.Entities.Carts", "Cart")

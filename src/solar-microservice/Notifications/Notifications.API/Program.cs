@@ -1,3 +1,4 @@
+using BuildingBlocks.Observability.DependencyInjection;
 
 using BuildingBlocks.Authentication_.Jwt;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,8 @@ using FluentValidation;
 using Carter;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSolarObservability(builder.Configuration, "notifications-api");
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<INotificationRepository, NotificationRepository>();

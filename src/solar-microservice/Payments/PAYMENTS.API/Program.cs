@@ -1,3 +1,5 @@
+using BuildingBlocks.Resilience.DependencyInjection;
+using BuildingBlocks.Observability.DependencyInjection;
 using BuildingBloacks.Behaviour;
 using BuildingBlocks.Authentication_.Jwt;
 using BuildingBlocks.Messaging.DependencyInjection;
@@ -13,6 +15,8 @@ using Serilog;
 using Carter;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSolarObservability(builder.Configuration, "payments-api");
 
 builder.Services.AddDbContext<PaymentsDbContext>(options =>
 {
@@ -64,7 +68,7 @@ var catalogUrl = builder.Configuration["Services:Orders"];
 builder.Services.AddHttpClient<IOrderService,OrderService>(client =>
 {
     client.BaseAddress = new Uri(catalogUrl ?? "http://localhost:7005");
-});
+}).AddSolarStandardResilience();
 
 var app = builder.Build();
 
