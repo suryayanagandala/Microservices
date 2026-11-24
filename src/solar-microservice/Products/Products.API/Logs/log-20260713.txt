@@ -1,0 +1,553 @@
+2026-07-13 11:05:44.132 +05:30 [INF] HTTP GET / responded 404 in 353.5012 ms
+2026-07-13 11:07:22.110 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 11:07:22.194 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 11:07:31.259 +05:30 [ERR] Failed executing DbCommand (215ms) [Parameters=[@__query_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='1000']
+SELECT t.productid, t.brand, t.capacity, t.capacityvalue, t.categoryid, t.createdat, t.deletedat, t.deletedreason, t.description, t.isactive, t.price, t.productname, t.stock, t.type, t.unit, t.updatedat, t.warrantyyears, p0.imageid, p0.createdat, p0.imageurl, p0.isactive, p0.productid, p0."UpdatedAt"
+FROM (
+    SELECT p.productid, p.brand, p.capacity, p.capacityvalue, p.categoryid, p.createdat, p.deletedat, p.deletedreason, p.description, p.isactive, p.price, p.productname, p.stock, p.type, p.unit, p.updatedat, p.warrantyyears
+    FROM products AS p
+    WHERE p.productid = @__query_ProductId_0 AND p.isactive
+    LIMIT 1
+) AS t
+LEFT JOIN productimage AS p0 ON t.productid = p0.productid
+ORDER BY t.productid
+2026-07-13 11:07:31.401 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Products.CoreModels.ProductDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:07:32.076 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 20
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:07:33.895 +05:30 [ERR] 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 20
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:07:33.973 +05:30 [ERR] HTTP GET /products/cart/1000 responded 500 in 11955.6559 ms
+2026-07-13 11:09:22.463 +05:30 [INF] [Start] handled request=GetProductByIdRequest-Response=GetProductByIdResponse
+2026-07-13 11:09:22.820 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductById.GetProductByIdRequest with Products.BusinessLayer.Features.GetProductById.GetProductByIdResponse
+2026-07-13 11:09:22.858 +05:30 [INF] HTTP GET /products/getproduct/1000 responded 200 in 406.0743 ms
+2026-07-13 11:10:10.492 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 11:10:10.796 +05:30 [ERR] Failed executing DbCommand (33ms) [Parameters=[@__query_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='1000']
+SELECT t.productid, t.brand, t.capacity, t.capacityvalue, t.categoryid, t.createdat, t.deletedat, t.deletedreason, t.description, t.isactive, t.price, t.productname, t.stock, t.type, t.unit, t.updatedat, t.warrantyyears, p0.imageid, p0.createdat, p0.imageurl, p0.isactive, p0.productid, p0."UpdatedAt"
+FROM (
+    SELECT p.productid, p.brand, p.capacity, p.capacityvalue, p.categoryid, p.createdat, p.deletedat, p.deletedreason, p.description, p.isactive, p.price, p.productname, p.stock, p.type, p.unit, p.updatedat, p.warrantyyears
+    FROM products AS p
+    WHERE p.productid = @__query_ProductId_0 AND p.isactive
+    LIMIT 1
+) AS t
+LEFT JOIN productimage AS p0 ON t.productid = p0.productid
+ORDER BY t.productid
+2026-07-13 11:10:10.814 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Products.CoreModels.ProductDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:10:11.173 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 20
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:10:11.211 +05:30 [ERR] 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 20
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:10:11.250 +05:30 [ERR] HTTP GET /products/cart/1000 responded 500 in 786.3433 ms
+2026-07-13 11:25:01.370 +05:30 [INF] HTTP GET / responded 404 in 341.6538 ms
+2026-07-13 11:25:33.156 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 11:25:33.236 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 11:25:38.688 +05:30 [ERR] Failed executing DbCommand (158ms) [Parameters=[@__query_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='1000']
+SELECT t.productid, t.brand, t.capacity, t.capacityvalue, t.categoryid, t.createdat, t.deletedat, t.deletedreason, t.description, t.isactive, t.price, t.productname, t.stock, t.type, t.unit, t.updatedat, t.warrantyyears, p0.imageid, p0.createdat, p0.imageurl, p0.isactive, p0.productid, p0."UpdatedAt"
+FROM (
+    SELECT p.productid, p.brand, p.capacity, p.capacityvalue, p.categoryid, p.createdat, p.deletedat, p.deletedreason, p.description, p.isactive, p.price, p.productname, p.stock, p.type, p.unit, p.updatedat, p.warrantyyears
+    FROM products AS p
+    WHERE p.productid = @__query_ProductId_0 AND p.isactive
+    LIMIT 1
+) AS t
+LEFT JOIN productimage AS p0 ON t.productid = p0.productid
+ORDER BY t.productid
+2026-07-13 11:25:38.802 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Products.CoreModels.ProductDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:25:39.505 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 20
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:25:40.526 +05:30 [ERR] 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+Npgsql.PostgresException (0x80004005): 42703: column p0.UpdatedAt does not exist
+
+POSITION: 288
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 20
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column p0.UpdatedAt does not exist
+    Hint: Perhaps you meant to reference the column "p0.updatedat".
+    Position: 288
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2026-07-13 11:25:40.573 +05:30 [ERR] HTTP GET /products/cart/1000 responded 500 in 7536.7955 ms
+2026-07-13 11:25:54.231 +05:30 [INF] [Start] handled request=GetProductByIdRequest-Response=GetProductByIdResponse
+2026-07-13 11:25:54.524 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductById.GetProductByIdRequest with Products.BusinessLayer.Features.GetProductById.GetProductByIdResponse
+2026-07-13 11:25:54.544 +05:30 [INF] HTTP GET /products/getproduct/1000 responded 200 in 322.7675 ms
+2026-07-13 11:32:10.723 +05:30 [INF] HTTP GET / responded 404 in 231.7347 ms
+2026-07-13 11:33:03.942 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 11:33:03.983 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 11:33:07.612 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Products.CoreModels.ProductDbContext'.
+System.InvalidCastException: Column 'deletedreason' is null.
+   at Npgsql.ThrowHelper.ThrowInvalidCastException_NoValue(FieldDescription field)
+   at Npgsql.NpgsqlDataReader.DbNullValueOrThrow[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetFieldValueCore[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetString(Int32 ordinal)
+   at lambda_method45(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Column 'deletedreason' is null.
+   at Npgsql.ThrowHelper.ThrowInvalidCastException_NoValue(FieldDescription field)
+   at Npgsql.NpgsqlDataReader.DbNullValueOrThrow[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetFieldValueCore[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetString(Int32 ordinal)
+   at lambda_method45(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-07-13 11:33:08.017 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Column 'deletedreason' is null.
+   at Npgsql.ThrowHelper.ThrowInvalidCastException_NoValue(FieldDescription field)
+   at Npgsql.NpgsqlDataReader.DbNullValueOrThrow[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetFieldValueCore[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetString(Int32 ordinal)
+   at lambda_method45(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 20
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-07-13 11:33:08.073 +05:30 [ERR] Column 'deletedreason' is null.
+System.InvalidCastException: Column 'deletedreason' is null.
+   at Npgsql.ThrowHelper.ThrowInvalidCastException_NoValue(FieldDescription field)
+   at Npgsql.NpgsqlDataReader.DbNullValueOrThrow[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetFieldValueCore[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetString(Int32 ordinal)
+   at lambda_method45(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 20
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-07-13 11:33:08.097 +05:30 [ERR] HTTP GET /products/cart/1000 responded 500 in 4214.4676 ms
+2026-07-13 11:35:15.620 +05:30 [INF] HTTP GET / responded 404 in 183.3427 ms
+2026-07-13 11:35:22.303 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 11:35:22.353 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 11:35:26.149 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductForCart.GetProductForCartQuery with Products.BusinessLayer.Features.GetProductForCart.GetProductForCartResult
+2026-07-13 11:35:26.177 +05:30 [INF] HTTP GET /products/cart/1000 responded 200 in 3953.8223 ms
+2026-07-13 12:08:01.716 +05:30 [INF] HTTP GET / responded 404 in 190.0958 ms
+2026-07-13 12:08:11.230 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 12:08:11.251 +05:30 [INF] [Start] handled request=GetProductByIdRequest-Response=GetProductByIdResponse
+2026-07-13 12:08:15.969 +05:30 [INF] performance is too low of
+2026-07-13 12:08:15.976 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductById.GetProductByIdRequest with Products.BusinessLayer.Features.GetProductById.GetProductByIdResponse
+2026-07-13 12:08:16.009 +05:30 [INF] HTTP GET /products/getproduct/1000 responded 200 in 4834.0329 ms
+2026-07-13 12:09:20.060 +05:30 [INF] [Start] handled request=GetProductByIdRequest-Response=GetProductByIdResponse
+2026-07-13 12:09:20.240 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductById.GetProductByIdRequest with Products.BusinessLayer.Features.GetProductById.GetProductByIdResponse
+2026-07-13 12:09:20.249 +05:30 [INF] HTTP GET /products/getproduct/1000 responded 200 in 197.2748 ms
+2026-07-13 12:09:53.678 +05:30 [INF] [Start] handled request=GetProductByIdRequest-Response=GetProductByIdResponse
+2026-07-13 12:09:53.750 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductById.GetProductByIdRequest with Products.BusinessLayer.Features.GetProductById.GetProductByIdResponse
+2026-07-13 12:09:53.762 +05:30 [INF] HTTP GET /products/getproduct/1000 responded 200 in 98.9594 ms
+2026-07-13 12:12:56.535 +05:30 [INF] HTTP GET / responded 404 in 217.3948 ms
+2026-07-13 12:13:04.697 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 12:13:04.742 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 12:13:10.020 +05:30 [INF] performance is too low of
+2026-07-13 12:13:10.029 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductForCart.GetProductForCartQuery with Products.BusinessLayer.Features.GetProductForCart.GetProductForCartResult
+2026-07-13 12:13:10.060 +05:30 [INF] HTTP GET /products/cart/1000 responded 200 in 5442.0051 ms
+2026-07-13 12:47:23.019 +05:30 [INF] HTTP GET / responded 404 in 212.3192 ms
+2026-07-13 12:49:29.003 +05:30 [INF] HTTP GET / responded 404 in 214.7421 ms
+2026-07-13 12:51:28.549 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 12:51:28.577 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 12:51:31.336 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductForCart.GetProductForCartQuery with Products.BusinessLayer.Features.GetProductForCart.GetProductForCartResult
+2026-07-13 12:51:31.352 +05:30 [INF] HTTP GET /products/cart/1000 responded 200 in 2843.5744 ms
+2026-07-13 12:52:52.475 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 12:52:52.522 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductForCart.GetProductForCartQuery with Products.BusinessLayer.Features.GetProductForCart.GetProductForCartResult
+2026-07-13 12:52:52.525 +05:30 [INF] HTTP GET /products/cart/1000 responded 200 in 52.3781 ms
+2026-07-13 12:53:10.597 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 12:53:10.698 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductForCart.GetProductForCartQuery with Products.BusinessLayer.Features.GetProductForCart.GetProductForCartResult
+2026-07-13 12:53:10.702 +05:30 [INF] HTTP GET /products/cart/1000 responded 200 in 105.7835 ms
+2026-07-13 12:54:46.429 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 12:54:46.448 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductForCart.GetProductForCartQuery with Products.BusinessLayer.Features.GetProductForCart.GetProductForCartResult
+2026-07-13 12:54:46.450 +05:30 [INF] HTTP GET /products/cart/1001 responded 200 in 22.1612 ms
+2026-07-13 12:55:21.631 +05:30 [INF] [Start] handled request=GetProductForCartQuery-Response=GetProductForCartResult
+2026-07-13 12:55:21.837 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Product not found.
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 28
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-07-13 12:55:22.478 +05:30 [ERR] Product not found.
+System.Exception: Product not found.
+   at Products.BusinessLayer.Features.GetProductForCart.GetProductForCartHandler.Handle(GetProductForCartQuery query, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.BusinessLayer\Features\GetProductForCart\GetProductForCartHandler.cs:line 28
+   at BuildingBloacks.Behaviour.LoggingBehavour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\BuildingBlocks\BuildingBloacks.Behaviour\LoggingBehavour.cs:line 22
+   at Products.API.Endpoints.ProductEndPoint.<>c.<<AddRoutes>b__2_16>d.MoveNext() in C:\Users\syanagandala\source\repos\SolarMicroservices\src\solar-microservice\Products\Products.API\Endpoints\ProductEndPoint.cs:line 139
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-07-13 12:55:22.490 +05:30 [ERR] HTTP GET /products/cart/9999 responded 500 in 859.3772 ms
+2026-07-13 14:51:57.749 +05:30 [INF] HTTP GET / responded 404 in 254.1114 ms
+2026-07-13 14:52:31.684 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 14:52:31.719 +05:30 [INF] [Start] handled request=GetProductsForCartQuery-Response=List`1
+2026-07-13 14:52:35.688 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartQuery with System.Collections.Generic.List`1[Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartResponse]
+2026-07-13 14:52:35.709 +05:30 [INF] HTTP POST /products/cart responded 200 in 4075.2233 ms
+2026-07-13 14:52:48.098 +05:30 [INF] [Start] handled request=GetProductsForCartQuery-Response=List`1
+2026-07-13 14:52:48.141 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartQuery with System.Collections.Generic.List`1[Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartResponse]
+2026-07-13 14:52:48.144 +05:30 [INF] HTTP POST /products/cart responded 200 in 50.7038 ms
+2026-07-13 14:53:43.502 +05:30 [INF] [Start] handled request=GetProductsForCartQuery-Response=List`1
+2026-07-13 14:53:43.643 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartQuery with System.Collections.Generic.List`1[Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartResponse]
+2026-07-13 14:53:43.648 +05:30 [INF] HTTP POST /products/cart responded 200 in 148.7318 ms
+2026-07-13 15:45:23.330 +05:30 [INF] HTTP GET / responded 404 in 154.0597 ms
+2026-07-13 15:45:29.223 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 15:45:29.272 +05:30 [INF] [Start] handled request=GetProductsForCartQuery-Response=List`1
+2026-07-13 15:45:34.140 +05:30 [INF] performance is too low of
+2026-07-13 15:45:34.145 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartQuery with System.Collections.Generic.List`1[Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartResponse]
+2026-07-13 15:45:34.172 +05:30 [INF] HTTP POST /products/cart responded 200 in 5032.3247 ms
+2026-07-13 17:01:42.774 +05:30 [INF] HTTP GET / responded 404 in 203.0633 ms
+2026-07-13 17:03:42.269 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 17:03:42.302 +05:30 [INF] [Start] handled request=GetProductsForCartQuery-Response=List`1
+2026-07-13 17:03:45.758 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartQuery with System.Collections.Generic.List`1[Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartResponse]
+2026-07-13 17:03:45.777 +05:30 [INF] HTTP POST /products/cart responded 200 in 3584.4105 ms
+2026-07-13 17:47:45.739 +05:30 [INF] HTTP GET / responded 404 in 175.7473 ms
+2026-07-13 17:49:53.950 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-13 17:49:53.994 +05:30 [INF] [Start] handled request=GetProductsForCartQuery-Response=List`1
+2026-07-13 17:49:58.356 +05:30 [INF] performance is too low of
+2026-07-13 17:49:58.365 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartQuery with System.Collections.Generic.List`1[Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartResponse]
+2026-07-13 17:49:58.397 +05:30 [INF] HTTP POST /products/cart responded 200 in 4555.8176 ms
+2026-07-13 17:54:36.962 +05:30 [INF] HTTP GET / responded 404 in 243.9084 ms

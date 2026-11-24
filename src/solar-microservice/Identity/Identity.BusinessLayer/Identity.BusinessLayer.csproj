@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\BuildingBloacks.Behaviour\BuildingBloacks.Behaviour.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\BuildingBlocks.Authentication,\BuildingBlocks.Authentication.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\BuildingBlocks.CQRS\BuildingBlocks.CQRS.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\BuildingBlocks.Exceptions\BuildingBlocks.Exceptions.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\BuildingBlocks.Utility\BuildingBlocks.Utility.csproj" />
+    <ProjectReference Include="..\Identity.Application\Identity.Application.csproj" />
+  </ItemGroup>
+
+</Project>

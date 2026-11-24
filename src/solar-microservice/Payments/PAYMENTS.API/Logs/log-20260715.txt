@@ -1,0 +1,12 @@
+2026-07-15 11:46:54.823 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 11:46:55.452 +05:30 [INF] Registered Consumers : 0
+2026-07-15 11:58:25.319 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 11:58:26.185 +05:30 [INF] Registered Consumers : 0
+2026-07-15 16:16:21.269 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 16:16:21.815 +05:30 [INF] Registered Consumers : 0
+2026-07-15 16:18:10.042 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 16:18:10.878 +05:30 [INF] Registered Consumers : 0
+2026-07-15 18:10:41.235 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 18:10:41.692 +05:30 [INF] Registered Consumers : 0
+2026-07-15 18:15:41.030 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 18:15:41.545 +05:30 [INF] Registered Consumers : 0

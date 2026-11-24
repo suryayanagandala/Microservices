@@ -1,0 +1,37 @@
+2026-07-14 11:48:54.869 +05:30 [INF] RabbitMQ Hosted Service Started
+2026-07-14 11:48:55.731 +05:30 [INF] Listening Queue : notification.queue
+2026-07-14 11:48:58.449 +05:30 [INF] HTTP GET / responded 404 in 341.4348 ms
+2026-07-14 12:26:25.305 +05:30 [INF] RabbitMQ Hosted Service Started
+2026-07-14 12:26:25.984 +05:30 [INF] Total Registered Events : 0
+2026-07-14 12:26:26.013 +05:30 [INF] Listening Queue : notification.queue
+2026-07-14 12:26:29.077 +05:30 [INF] HTTP GET / responded 404 in 189.7359 ms
+2026-07-14 12:38:43.339 +05:30 [INF] RabbitMQ Hosted Service Started
+2026-07-14 12:38:44.168 +05:30 [INF] Total Registered Events : 0
+2026-07-14 12:38:44.208 +05:30 [INF] Listening Queue : notification.queue
+2026-07-14 12:38:46.561 +05:30 [INF] HTTP GET / responded 404 in 278.0185 ms
+2026-07-14 12:49:07.407 +05:30 [INF] RabbitMQ Hosted Service Started
+2026-07-14 12:49:08.196 +05:30 [INF] Total Registered Events : 0
+2026-07-14 12:49:08.233 +05:30 [INF] Listening Queue : notification.queue
+2026-07-14 12:49:10.197 +05:30 [INF] HTTP GET / responded 404 in 180.2693 ms
+2026-07-14 12:58:50.236 +05:30 [INF] RabbitMQ Hosted Service Started
+2026-07-14 12:58:51.328 +05:30 [INF] Total Registered Events : 0
+2026-07-14 12:58:51.370 +05:30 [INF] Listening Queue : notification.queue
+2026-07-14 12:58:53.912 +05:30 [INF] HTTP GET / responded 404 in 206.0685 ms
+2026-07-14 14:46:22.899 +05:30 [INF] RabbitMQ Hosted Service Started
+2026-07-14 14:46:23.837 +05:30 [INF] Total Registered Events : 0
+2026-07-14 14:46:23.884 +05:30 [INF] Listening Queue : notification.queue
+2026-07-14 14:46:26.675 +05:30 [INF] HTTP GET / responded 404 in 300.5578 ms
+2026-07-14 15:19:28.430 +05:30 [INF] RabbitMQ Hosted Service Started
+2026-07-14 15:19:29.463 +05:30 [INF] Registry Hash = 41149443
+2026-07-14 15:19:29.691 +05:30 [INF] Total Registered Events : 0
+2026-07-14 15:19:29.893 +05:30 [INF] Listening Queue : notification.queue
+2026-07-14 15:19:32.298 +05:30 [INF] HTTP GET / responded 404 in 206.5374 ms
+2026-07-14 18:14:22.513 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-14 18:14:23.010 +05:30 [INF] Registered Consumers : 0
+2026-07-14 18:14:24.320 +05:30 [INF] HTTP GET / responded 404 in 262.1521 ms
+2026-07-14 21:29:17.657 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-14 21:29:18.468 +05:30 [INF] Registered Consumers : 0
+2026-07-14 21:29:20.457 +05:30 [INF] HTTP GET / responded 404 in 347.3598 ms
+2026-07-14 22:38:10.056 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-14 22:38:10.643 +05:30 [INF] Registered Consumers : 0
+2026-07-14 22:38:12.596 +05:30 [INF] HTTP GET / responded 404 in 322.3804 ms

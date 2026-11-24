@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Identity\Identity.Application\Identity.Application.csproj" />
+    <ProjectReference Include="..\Products.ApplicationLayer\Products.ApplicationLayer.csproj" />
+    <ProjectReference Include="..\Products.CoreModels\Products.CoreModels.csproj" />
+  </ItemGroup>
+
+</Project>

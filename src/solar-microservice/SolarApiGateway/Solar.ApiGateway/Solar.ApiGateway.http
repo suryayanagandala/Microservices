@@ -1,0 +1,6 @@
+@Solar.ApiGateway_HostAddress = http://localhost:7008
+
+GET {{Solar.ApiGateway_HostAddress}}/
+Accept: application/json
+
+###

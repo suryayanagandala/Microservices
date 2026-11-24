@@ -1,0 +1,35 @@
+2026-07-15 11:46:53.411 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 11:46:53.954 +05:30 [INF] Registered Consumers : 0
+2026-07-15 11:58:25.506 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 11:58:26.273 +05:30 [INF] Registered Consumers : 0
+2026-07-15 16:16:21.279 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 16:16:21.800 +05:30 [INF] Registered Consumers : 1
+2026-07-15 16:16:21.944 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-15 16:16:21.980 +05:30 [INF] Listening Queue : order.queue
+2026-07-15 16:18:09.588 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 16:18:10.239 +05:30 [INF] Registered Consumers : 1
+2026-07-15 16:18:10.422 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-15 16:18:10.502 +05:30 [INF] Listening Queue : order.queue
+2026-07-15 16:19:47.654 +05:30 [INF] Received cart.checkout
+2026-07-15 16:19:47.747 +05:30 [INF] CheckOut Event Received for User {UserId}660285
+2026-07-15 16:19:48.524 +05:30 [INF] Order 100 Created Successfully
+2026-07-15 16:19:48.527 +05:30 [INF] 2 rows inserted into orders tables
+2026-07-15 16:19:48.563 +05:30 [INF] Published OrderCreatedIntegrationEvent -> order.created
+2026-07-15 18:10:41.418 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 18:10:41.877 +05:30 [INF] Registered Consumers : 1
+2026-07-15 18:10:41.950 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-15 18:10:41.997 +05:30 [INF] Listening Queue : order.queue
+2026-07-15 18:11:37.680 +05:30 [INF] HTTP GET /orders/my-orders responded 401 in 180.2043 ms
+2026-07-15 18:15:43.305 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 18:15:43.727 +05:30 [INF] Registered Consumers : 1
+2026-07-15 18:15:43.781 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-15 18:15:43.813 +05:30 [INF] Listening Queue : order.queue
+2026-07-15 18:16:51.356 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-15 18:16:51.364 +05:30 [INF] [Start] handled request=GetMyOrdersQuery-Response=IReadOnlyList`1
+2026-07-15 18:16:52.103 +05:30 [INF] Start processing HTTP request POST http://localhost:7003/products/cart
+2026-07-15 18:16:52.112 +05:30 [INF] Sending HTTP request POST http://localhost:7003/products/cart
+2026-07-15 18:16:55.674 +05:30 [INF] Received HTTP response headers after 3556.2366ms - 200
+2026-07-15 18:16:55.683 +05:30 [INF] End processing HTTP request after 3597.2154ms - 200
+2026-07-15 18:16:55.737 +05:30 [INF] performance is too low of
+2026-07-15 18:16:55.740 +05:30 [INF] [END] handled Orders.BusinessLayer.Features.GetMyOrders.GetMyOrdersQuery with System.Collections.Generic.IReadOnlyList`1[Orders.BusinessLayer.Features.Common.OrderResponse]
+2026-07-15 18:16:55.802 +05:30 [INF] HTTP GET /orders/my-orders responded 200 in 4731.1667 ms

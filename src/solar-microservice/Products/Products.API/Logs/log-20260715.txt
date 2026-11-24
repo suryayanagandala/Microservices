@@ -1,0 +1,29 @@
+2026-07-15 11:45:39.595 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 11:45:40.149 +05:30 [INF] Registered Consumers : 0
+2026-07-15 11:45:46.452 +05:30 [INF] HTTP GET / responded 404 in 794.8684 ms
+2026-07-15 11:46:39.850 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 11:46:40.693 +05:30 [INF] Registered Consumers : 0
+2026-07-15 11:46:44.285 +05:30 [INF] HTTP GET / responded 404 in 492.9405 ms
+2026-07-15 11:58:10.574 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 11:58:11.149 +05:30 [INF] Registered Consumers : 0
+2026-07-15 11:58:15.403 +05:30 [INF] HTTP GET / responded 404 in 479.3243 ms
+2026-07-15 16:16:16.216 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 16:16:16.779 +05:30 [INF] Registered Consumers : 0
+2026-07-15 16:16:18.421 +05:30 [INF] HTTP GET / responded 404 in 169.8864 ms
+2026-07-15 16:18:02.653 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 16:18:03.847 +05:30 [INF] Registered Consumers : 0
+2026-07-15 16:18:06.184 +05:30 [INF] HTTP GET / responded 404 in 323.9556 ms
+2026-07-15 16:19:43.633 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-15 16:19:43.664 +05:30 [INF] [Start] handled request=GetProductsForCartQuery-Response=List`1
+2026-07-15 16:19:47.443 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartQuery with System.Collections.Generic.List`1[Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartResponse]
+2026-07-15 16:19:47.544 +05:30 [INF] HTTP POST /products/cart responded 200 in 3981.8611 ms
+2026-07-15 18:10:34.508 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 18:10:35.271 +05:30 [INF] Registered Consumers : 0
+2026-07-15 18:10:38.137 +05:30 [INF] HTTP GET / responded 404 in 418.6180 ms
+2026-07-15 18:15:34.974 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-15 18:15:36.212 +05:30 [INF] Registered Consumers : 0
+2026-07-15 18:15:38.317 +05:30 [INF] HTTP GET / responded 404 in 223.2796 ms
+2026-07-15 18:16:52.251 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-15 18:16:52.275 +05:30 [INF] [Start] handled request=GetProductsForCartQuery-Response=List`1
+2026-07-15 18:16:55.652 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartQuery with System.Collections.Generic.List`1[Products.BusinessLayer.Features.GetProductsForCartQuery.GetProductsForCartResponse]
+2026-07-15 18:16:55.671 +05:30 [INF] HTTP POST /products/cart responded 200 in 3524.9645 ms

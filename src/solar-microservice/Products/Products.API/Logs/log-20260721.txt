@@ -1,0 +1,12 @@
+2026-07-21 10:13:23.663 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-21 10:13:24.099 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-21 10:13:24.108 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 445.8389 ms
+2026-07-21 10:13:24.151 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-21 10:13:24.175 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-21 10:13:24.181 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 31.0724 ms
+2026-07-21 10:23:44.866 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-21 10:23:45.060 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-21 10:23:45.066 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 199.6587 ms
+2026-07-21 10:23:45.098 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-21 10:23:45.114 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-21 10:23:45.120 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 21.4027 ms

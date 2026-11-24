@@ -1,0 +1,283 @@
+2026-07-20 11:20:00.618 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:20:01.759 +05:30 [INF] Registered Consumers : 0
+2026-07-20 11:20:18.379 +05:30 [INF] HTTP GET / responded 404 in 222.9673 ms
+2026-07-20 11:21:14.839 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 11:21:14.862 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:21:18.855 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:21:18.876 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 4091.7472 ms
+2026-07-20 11:21:40.065 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:21:40.316 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:21:40.323 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 273.0178 ms
+2026-07-20 11:24:15.398 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:24:15.433 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:24:15.444 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 47.5987 ms
+2026-07-20 11:24:24.134 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:24:24.149 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:24:24.155 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 20.7533 ms
+2026-07-20 11:24:30.406 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:24:30.426 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:24:30.431 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 24.6841 ms
+2026-07-20 11:24:35.395 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:24:35.409 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:24:35.415 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 19.9189 ms
+2026-07-20 11:24:38.676 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:24:38.690 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:24:38.699 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 22.7487 ms
+2026-07-20 11:24:48.061 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:24:48.071 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:24:48.076 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 15.0428 ms
+2026-07-20 11:24:51.684 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:24:51.697 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:24:51.703 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 18.9540 ms
+2026-07-20 11:26:19.147 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:26:19.333 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:26:19.339 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 191.7301 ms
+2026-07-20 11:26:25.201 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:26:25.212 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:26:25.223 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 22.1132 ms
+2026-07-20 11:26:31.705 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:26:31.796 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:26:31.808 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 103.4747 ms
+2026-07-20 11:28:04.442 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:28:04.474 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:28:04.487 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 44.9499 ms
+2026-07-20 11:28:49.311 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:28:49.325 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:28:49.340 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 29.3296 ms
+2026-07-20 11:29:03.468 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:29:03.493 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:29:03.500 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 32.2780 ms
+2026-07-20 11:30:15.131 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:30:15.903 +05:30 [INF] Registered Consumers : 0
+2026-07-20 11:30:26.634 +05:30 [INF] HTTP GET / responded 404 in 273.5209 ms
+2026-07-20 11:30:43.163 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 11:30:43.192 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:30:48.572 +05:30 [INF] performance is too low of
+2026-07-20 11:30:48.579 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:30:48.603 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 5576.2990 ms
+2026-07-20 11:31:12.011 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:31:12.231 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:31:12.239 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 239.3779 ms
+2026-07-20 11:31:52.793 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:31:53.545 +05:30 [INF] Registered Consumers : 0
+2026-07-20 11:32:01.478 +05:30 [INF] HTTP GET / responded 404 in 283.0779 ms
+2026-07-20 11:32:40.259 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 11:32:40.293 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:32:43.760 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:32:43.779 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 3608.3137 ms
+2026-07-20 11:33:19.118 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:33:19.771 +05:30 [INF] Registered Consumers : 0
+2026-07-20 11:33:23.986 +05:30 [INF] HTTP GET / responded 404 in 329.4321 ms
+2026-07-20 11:33:47.368 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 11:33:47.410 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:33:51.278 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:33:51.296 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 4012.8213 ms
+2026-07-20 11:36:15.110 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:36:15.292 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:36:15.298 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 196.3584 ms
+2026-07-20 11:38:08.211 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:38:08.270 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:38:08.279 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 69.7410 ms
+2026-07-20 11:39:58.982 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:39:59.409 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:39:59.416 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 434.7414 ms
+2026-07-20 11:41:17.583 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:41:17.598 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:41:17.608 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 25.2881 ms
+2026-07-20 11:42:23.566 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:42:23.609 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:42:23.616 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 49.8530 ms
+2026-07-20 11:47:00.035 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:47:00.184 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:47:00.187 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 152.8210 ms
+2026-07-20 11:52:04.745 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:52:06.087 +05:30 [INF] Registered Consumers : 0
+2026-07-20 11:52:12.145 +05:30 [INF] HTTP GET / responded 404 in 439.9496 ms
+2026-07-20 11:52:27.256 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 11:52:27.283 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:52:30.332 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:52:30.357 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 3134.6968 ms
+2026-07-20 11:52:39.662 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:52:39.776 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:52:39.780 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 122.5067 ms
+2026-07-20 11:52:51.116 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=GetParentCategoriesResponse
+2026-07-20 11:52:51.152 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesResponse
+2026-07-20 11:52:51.154 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 40.3751 ms
+2026-07-20 11:59:22.537 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:59:23.394 +05:30 [INF] Registered Consumers : 0
+2026-07-20 11:59:31.027 +05:30 [INF] HTTP GET / responded 404 in 327.8188 ms
+2026-07-20 11:59:48.893 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 11:59:48.943 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 11:59:52.186 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 11:59:52.209 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 3342.7065 ms
+2026-07-20 12:00:08.939 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:00:09.047 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:00:09.056 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 121.1142 ms
+2026-07-20 12:00:21.650 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:00:21.685 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:00:21.687 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 38.8188 ms
+2026-07-20 12:02:45.519 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:02:45.550 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:02:45.559 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 43.8729 ms
+2026-07-20 12:03:54.669 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:03:54.684 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:03:54.689 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 20.1756 ms
+2026-07-20 12:05:43.075 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:05:43.561 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:05:43.567 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 493.4871 ms
+2026-07-20 12:06:19.699 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:06:19.722 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:06:19.730 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 32.0965 ms
+2026-07-20 12:08:00.272 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:08:00.299 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:08:00.306 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 34.5722 ms
+2026-07-20 12:15:27.432 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:15:27.876 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:15:27.881 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 450.4084 ms
+2026-07-20 12:23:39.937 +05:30 [INF] HTTP GET /uploads/categories/6d4700da-0952-46ac-ae38-22fe285626d1.jpg responded 200 in 108.9741 ms
+2026-07-20 12:23:39.992 +05:30 [INF] HTTP GET /favicon.ico responded 404 in 2.1360 ms
+2026-07-20 12:24:04.898 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:24:05.265 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:24:05.288 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 390.1771 ms
+2026-07-20 12:25:52.824 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:25:52.839 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:25:52.844 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 20.7043 ms
+2026-07-20 12:27:15.403 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 12:27:15.414 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 12:27:15.428 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 24.7204 ms
+2026-07-20 12:27:15.585 +05:30 [INF] HTTP GET /uploads/categories/6d4700da-0952-46ac-ae38-22fe285626d1.jpg responded 200 in 88.1871 ms
+2026-07-20 12:27:15.635 +05:30 [INF] HTTP GET /uploads/categories/001caca2-c08b-48af-90fa-1d26aba25dae.jpg responded 200 in 84.9999 ms
+2026-07-20 12:27:15.712 +05:30 [INF] HTTP GET /uploads/categories/7be00720-707f-429f-b2ad-66d1f656f948.jpg responded 200 in 107.8995 ms
+2026-07-20 12:27:15.712 +05:30 [INF] HTTP GET /uploads/categories/92120136-a68f-4b05-9b09-9bd63a3ad41c.jpg responded 200 in 137.8423 ms
+2026-07-20 12:27:15.729 +05:30 [INF] HTTP GET /uploads/categories/0678a02d-e488-45dd-91a3-5da53103cfa6 responded 404 in 5.2709 ms
+2026-07-20 12:27:15.731 +05:30 [INF] HTTP GET /uploads/categories/2896af9c-fe40-4943-b375-1a0c3be2386e.jpg responded 200 in 94.9932 ms
+2026-07-20 12:27:15.718 +05:30 [INF] HTTP GET /uploads/categories/d3719478-6cc2-4c6c-b260-860c464f058c.jpg responded 200 in 82.9932 ms
+2026-07-20 12:27:15.735 +05:30 [INF] HTTP GET /uploads/categories/edf3877e-c4e2-49b1-b151-a8f35db6283c.jpg responded 200 in 126.0344 ms
+2026-07-20 12:29:47.663 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=GetAllProductsResponse
+2026-07-20 12:29:48.171 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with Products.BusinessLayer.Features.GetAllProducts.GetAllProductsResponse
+2026-07-20 12:29:48.195 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 541.5761 ms
+2026-07-20 12:30:24.503 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=GetAllProductsResponse
+2026-07-20 12:30:24.519 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with Products.BusinessLayer.Features.GetAllProducts.GetAllProductsResponse
+2026-07-20 12:30:24.525 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 26.5396 ms
+2026-07-20 12:30:25.227 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=GetAllProductsResponse
+2026-07-20 12:30:25.241 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with Products.BusinessLayer.Features.GetAllProducts.GetAllProductsResponse
+2026-07-20 12:30:25.245 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 18.9803 ms
+2026-07-20 12:32:23.792 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 12:32:24.766 +05:30 [INF] Registered Consumers : 0
+2026-07-20 12:32:28.118 +05:30 [INF] HTTP GET / responded 404 in 254.1771 ms
+2026-07-20 12:32:54.249 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 12:32:54.266 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:32:57.634 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:32:57.670 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 3464.9555 ms
+2026-07-20 12:34:30.410 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:34:30.549 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:34:30.555 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 152.5974 ms
+2026-07-20 12:34:30.952 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:34:31.010 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:34:31.014 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 63.3432 ms
+2026-07-20 12:34:41.229 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:34:41.243 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:34:41.249 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 19.9618 ms
+2026-07-20 12:34:41.411 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:34:41.423 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:34:41.427 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 16.4388 ms
+2026-07-20 12:35:52.102 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:35:52.114 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:35:52.118 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 16.4367 ms
+2026-07-20 12:35:52.676 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:35:52.688 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:35:52.691 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 15.2258 ms
+2026-07-20 12:37:23.396 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:37:23.437 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:37:23.443 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 46.4885 ms
+2026-07-20 12:37:24.255 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:37:24.278 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:37:24.286 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 31.1130 ms
+2026-07-20 12:44:50.382 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:44:50.679 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:44:50.683 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 301.8160 ms
+2026-07-20 12:44:50.714 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:44:50.727 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:44:50.731 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 16.7105 ms
+2026-07-20 12:46:17.089 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:46:17.103 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:46:17.110 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 20.9918 ms
+2026-07-20 12:46:17.181 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:46:17.191 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:46:17.194 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 13.8995 ms
+2026-07-20 12:56:11.937 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:56:12.214 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:56:12.219 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 282.5299 ms
+2026-07-20 12:56:12.232 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:56:12.262 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:56:12.273 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 41.7443 ms
+2026-07-20 12:58:06.930 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:58:06.958 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:58:06.967 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 37.3141 ms
+2026-07-20 12:58:07.024 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 12:58:07.038 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 12:58:07.047 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 23.7370 ms
+2026-07-20 13:01:19.111 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:01:19.423 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:01:19.429 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 318.1423 ms
+2026-07-20 13:01:19.446 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:01:19.463 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:01:19.469 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 22.4153 ms
+2026-07-20 13:02:17.927 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 13:02:17.950 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 13:02:17.964 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 63.3054 ms
+2026-07-20 13:02:17.989 +05:30 [INF] HTTP GET /uploads/categories/0678a02d-e488-45dd-91a3-5da53103cfa6 responded 404 in 0.1210 ms
+2026-07-20 13:02:33.431 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:02:33.452 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:02:33.459 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 27.9955 ms
+2026-07-20 13:02:33.475 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:02:33.482 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:02:33.485 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 9.7429 ms
+2026-07-20 13:02:39.043 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 13:02:39.059 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 13:02:39.063 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 22.4606 ms
+2026-07-20 13:02:39.074 +05:30 [INF] HTTP GET /uploads/categories/0678a02d-e488-45dd-91a3-5da53103cfa6 responded 404 in 0.0762 ms
+2026-07-20 13:03:03.698 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 13:03:03.710 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 13:03:03.730 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 32.7648 ms
+2026-07-20 13:03:03.753 +05:30 [INF] HTTP GET /uploads/categories/0678a02d-e488-45dd-91a3-5da53103cfa6 responded 404 in 0.0879 ms
+2026-07-20 13:03:08.862 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:03:08.880 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:03:08.884 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 22.3564 ms
+2026-07-20 13:03:08.901 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:03:08.913 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:03:08.917 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 16.6676 ms
+2026-07-20 13:04:00.245 +05:30 [INF] [Start] handled request=GetParentCategoriesRequest-Response=IReadOnlyList`1
+2026-07-20 13:04:00.267 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetParentCategories.GetParentCategoriesRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.ParentCategoryResponse]
+2026-07-20 13:04:00.276 +05:30 [INF] HTTP GET /categories/getparentcategories responded 200 in 31.4084 ms
+2026-07-20 13:04:00.292 +05:30 [INF] HTTP GET /uploads/categories/0678a02d-e488-45dd-91a3-5da53103cfa6 responded 404 in 0.1493 ms
+2026-07-20 13:04:02.905 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:04:02.924 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:04:02.929 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 24.3650 ms
+2026-07-20 13:04:02.940 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:04:02.947 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:04:02.950 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 10.8239 ms
+2026-07-20 13:58:32.991 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:58:33.301 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:58:33.304 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 313.1386 ms
+2026-07-20 13:58:33.422 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 13:58:33.441 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 13:58:33.444 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 22.4148 ms
+2026-07-20 14:48:52.584 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 14:48:52.865 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 14:48:52.871 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 287.4981 ms
+2026-07-20 14:48:53.481 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 14:48:53.492 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 14:48:53.497 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 15.4767 ms
+2026-07-20 17:49:04.285 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 17:49:04.656 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 17:49:04.664 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 382.5274 ms
+2026-07-20 17:49:04.684 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 17:49:04.723 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 17:49:04.734 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 49.4672 ms
+2026-07-20 18:22:04.658 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 18:22:04.885 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 18:22:04.890 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 232.6711 ms
+2026-07-20 18:22:05.081 +05:30 [INF] [Start] handled request=GetAllProductsRequest-Response=IReadOnlyList`1
+2026-07-20 18:22:05.094 +05:30 [INF] [END] handled Products.BusinessLayer.Features.GetAllProducts.GetAllProductsRequest with System.Collections.Generic.IReadOnlyList`1[Products.CoreModels.Dto_s.GetProductsDto]
+2026-07-20 18:22:05.099 +05:30 [INF] HTTP GET /products/getallproducts responded 200 in 18.0624 ms

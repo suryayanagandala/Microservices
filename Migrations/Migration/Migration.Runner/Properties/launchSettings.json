@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Migration.Runner": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

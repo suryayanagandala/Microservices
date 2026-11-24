@@ -1,0 +1,143 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: solar-rabbitmq
+    restart: unless-stopped
+
+  products-db:
+    image: postgres:16
+    container_name: solar-products-db
+    restart: unless-stopped
+    volumes:
+      - products-db-data:/var/lib/postgresql/data
+
+  cart-db:
+    image: postgres:16
+    container_name: solar-cart-db
+    restart: unless-stopped
+    volumes:
+      - cart-db-data:/var/lib/postgresql/data
+
+  orders-db:
+    image: postgres:16
+    container_name: solar-orders-db
+    restart: unless-stopped
+    volumes:
+      - orders-db-data:/var/lib/postgresql/data
+
+  payments-db:
+    image: postgres:16
+    container_name: solar-payments-db
+    restart: unless-stopped
+    volumes:
+      - payments-db-data:/var/lib/postgresql/data
+
+  invoices-db:
+    image: postgres:16
+    container_name: solar-invoices-db
+    restart: unless-stopped
+    volumes:
+      - invoices-db-data:/var/lib/postgresql/data
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: solar-sqlserver
+    restart: unless-stopped
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+
+  identity.api:
+    image: ${DOCKER_REGISTRY-}identityapi
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Identity/Identity.Api/Dockerfile
+    depends_on:
+      - rabbitmq
+      - sqlserver
+
+  notifications.api:
+    image: ${DOCKER_REGISTRY-}notificationsapi
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Notifications/Notifications.API/Dockerfile
+    depends_on:
+      - rabbitmq
+      - sqlserver
+
+  products.api:
+    image: ${DOCKER_REGISTRY-}productsapi
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Products/Products.API/Dockerfile
+    depends_on:
+      - rabbitmq
+      - products-db
+
+  cart.api:
+    image: ${DOCKER_REGISTRY-}cartapi
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Cart/CART.API/Dockerfile
+    depends_on:
+      - rabbitmq
+      - cart-db
+      - products.api
+
+  orders.api:
+    image: ${DOCKER_REGISTRY-}ordersapi
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Orders/ORDERS.API/Dockerfile
+    depends_on:
+      - rabbitmq
+      - orders-db
+      - products.api
+
+  payments.api:
+    image: ${DOCKER_REGISTRY-}paymentsapi
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Payments/PAYMENTS.API/Dockerfile
+    depends_on:
+      - rabbitmq
+      - payments-db
+      - orders.api
+
+  invoices.api:
+    image: ${DOCKER_REGISTRY-}invoicesapi
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Invoices/INVOICES.API/Dockerfile
+    depends_on:
+      - rabbitmq
+      - invoices-db
+
+  solar.api.gateway:
+    image: ${DOCKER_REGISTRY-}solarapigateway
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: SolarApiGateway/Solar.ApiGateway/Dockerfile
+    depends_on:
+      - identity.api
+      - notifications.api
+      - products.api
+      - cart.api
+      - orders.api
+      - payments.api
+      - invoices.api
+
+volumes:
+  products-db-data:
+  cart-db-data:
+  orders-db-data:
+  payments-db-data:
+  invoices-db-data:
+  sqlserver-data:

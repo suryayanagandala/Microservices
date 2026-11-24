@@ -1,0 +1,10 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Products.BusinessLayer.Features.CreateProduct
+{
+    public record CreateProductResponse(int productId,bool isSuccess,DateTimeOffset createdat);
+}

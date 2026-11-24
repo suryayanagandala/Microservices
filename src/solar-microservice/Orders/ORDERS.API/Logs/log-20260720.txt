@@ -1,0 +1,43 @@
+2026-07-20 11:20:11.109 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:20:11.111 +05:30 [INF] Order Cleanup Worker Started
+2026-07-20 11:20:12.478 +05:30 [INF] Registered Consumers : 2
+2026-07-20 11:20:12.904 +05:30 [INF] Queue order.queue Bound -> payment.created
+2026-07-20 11:20:13.092 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-20 11:20:13.250 +05:30 [INF] Listening Queue : order.queue
+2026-07-20 11:20:14.590 +05:30 [INF] 1 expired orders cancelled.
+2026-07-20 11:30:27.292 +05:30 [INF] Order Cleanup Worker Started
+2026-07-20 11:30:27.290 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:30:28.041 +05:30 [INF] Registered Consumers : 2
+2026-07-20 11:30:28.273 +05:30 [INF] Queue order.queue Bound -> payment.created
+2026-07-20 11:30:28.494 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-20 11:30:28.694 +05:30 [INF] Listening Queue : order.queue
+2026-07-20 11:32:01.384 +05:30 [INF] Order Cleanup Worker Started
+2026-07-20 11:32:01.384 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:32:02.018 +05:30 [INF] Registered Consumers : 2
+2026-07-20 11:32:02.168 +05:30 [INF] Queue order.queue Bound -> payment.created
+2026-07-20 11:32:02.193 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-20 11:32:02.277 +05:30 [INF] Listening Queue : order.queue
+2026-07-20 11:33:26.745 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:33:26.745 +05:30 [INF] Order Cleanup Worker Started
+2026-07-20 11:33:27.312 +05:30 [INF] Registered Consumers : 2
+2026-07-20 11:33:27.358 +05:30 [INF] Queue order.queue Bound -> payment.created
+2026-07-20 11:33:27.374 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-20 11:33:27.610 +05:30 [INF] Listening Queue : order.queue
+2026-07-20 11:52:15.302 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:52:15.302 +05:30 [INF] Order Cleanup Worker Started
+2026-07-20 11:52:16.330 +05:30 [INF] Registered Consumers : 2
+2026-07-20 11:52:16.522 +05:30 [INF] Queue order.queue Bound -> payment.created
+2026-07-20 11:52:16.540 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-20 11:52:16.655 +05:30 [INF] Listening Queue : order.queue
+2026-07-20 11:59:31.279 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 11:59:31.279 +05:30 [INF] Order Cleanup Worker Started
+2026-07-20 11:59:31.905 +05:30 [INF] Registered Consumers : 2
+2026-07-20 11:59:32.185 +05:30 [INF] Queue order.queue Bound -> payment.created
+2026-07-20 11:59:32.206 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-20 11:59:32.309 +05:30 [INF] Listening Queue : order.queue
+2026-07-20 12:32:31.858 +05:30 [INF] Order Cleanup Worker Started
+2026-07-20 12:32:31.858 +05:30 [INF] RabbitMQ Consumer Started
+2026-07-20 12:32:32.285 +05:30 [INF] Registered Consumers : 2
+2026-07-20 12:32:32.428 +05:30 [INF] Queue order.queue Bound -> payment.created
+2026-07-20 12:32:32.502 +05:30 [INF] Queue order.queue Bound -> cart.checkout
+2026-07-20 12:32:32.667 +05:30 [INF] Listening Queue : order.queue

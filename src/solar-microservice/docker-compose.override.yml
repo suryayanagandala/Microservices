@@ -1,0 +1,170 @@
+services:
+  rabbitmq:
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  products-db:
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: category_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  cart-db:
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB: CartDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  orders-db:
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_DB: OrdersDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  payments-db:
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_DB: PaymentsDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  invoices-db:
+    ports:
+      - "5437:5432"
+    environment:
+      POSTGRES_DB: InvoicesDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  sqlserver:
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "SolarPassword123!"
+
+  identity.api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=IdentityDb;User Id=sa;Password=SolarPassword123!;TrustServerCertificate=True"
+      RabbitMQ__HostName: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__UserName: guest
+      RabbitMQ__Password: guest
+      RabbitMQ__VirtualHost: /
+      RabbitMQ__ExchangeName: solar.events
+    ports:
+      - "5001:8080"
+
+  notifications.api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=NotificationsDb;User Id=sa;Password=SolarPassword123!;TrustServerCertificate=True"
+      RabbitMQ__HostName: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__UserName: guest
+      RabbitMQ__Password: guest
+      RabbitMQ__VirtualHost: /
+      RabbitMQ__ExchangeName: solar.events
+    ports:
+      - "5002:8080"
+
+  products.api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ConnectionStrings__DefaultConnection: "Host=products-db;Port=5432;Database=category_db;Username=postgres;Password=postgres"
+      RabbitMQ__HostName: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__UserName: guest
+      RabbitMQ__Password: guest
+      RabbitMQ__VirtualHost: /
+      RabbitMQ__ExchangeName: solar.events
+    ports:
+      - "5003:8080"
+
+  cart.api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ConnectionStrings__Database: "Host=cart-db;Port=5432;Database=CartDb;Username=postgres;Password=postgres"
+      Services__Catalog: "http://products.api:8080"
+      RabbitMQ__HostName: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__UserName: guest
+      RabbitMQ__Password: guest
+      RabbitMQ__VirtualHost: /
+      RabbitMQ__ExchangeName: solar.events
+    ports:
+      - "5004:8080"
+
+  orders.api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ConnectionStrings__Database: "Host=orders-db;Port=5432;Database=OrdersDb;Username=postgres;Password=postgres"
+      Services__Products: "http://products.api:8080"
+      RabbitMQ__HostName: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__UserName: guest
+      RabbitMQ__Password: guest
+      RabbitMQ__VirtualHost: /
+      RabbitMQ__ExchangeName: solar.events
+    ports:
+      - "5005:8080"
+
+  payments.api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ConnectionStrings__Database: "Host=payments-db;Port=5432;Database=PaymentsDb;Username=postgres;Password=postgres"
+      Services__Orders: "http://orders.api:8080"
+      RabbitMQ__HostName: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__UserName: guest
+      RabbitMQ__Password: guest
+      RabbitMQ__VirtualHost: /
+      RabbitMQ__ExchangeName: solar.events
+    ports:
+      - "5006:8080"
+
+  invoices.api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ConnectionStrings__Database: "Host=invoices-db;Port=5432;Database=InvoicesDb;Username=postgres;Password=postgres"
+      RabbitMQ__HostName: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__UserName: guest
+      RabbitMQ__Password: guest
+      RabbitMQ__VirtualHost: /
+      RabbitMQ__ExchangeName: solar.events
+    ports:
+      - "5007:8080"
+
+  solar.api.gateway:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ReverseProxy__Clusters__identity-cluster__Destinations__identity-api__Address: "http://identity.api:8080/"
+      ReverseProxy__Clusters__notifications-cluster__Destinations__notifications-api__Address: "http://notifications.api:8080/"
+      ReverseProxy__Clusters__products-cluster__Destinations__products-api__Address: "http://products.api:8080/"
+      ReverseProxy__Clusters__cart-cluster__Destinations__cart-api__Address: "http://cart.api:8080/"
+      ReverseProxy__Clusters__orders-cluster__Destinations__orders-api__Address: "http://orders.api:8080/"
+      ReverseProxy__Clusters__payments-cluster__Destinations__payments-api__Address: "http://payments.api:8080/"
+      ReverseProxy__Clusters__invoices-cluster__Destinations__invoices-api__Address: "http://invoices.api:8080/"
+    ports:
+      - "5000:8080"

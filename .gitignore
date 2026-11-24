@@ -1,0 +1,34 @@
+﻿# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET build output
+**/bin/
+**/obj/
+TestResults/
+*.trx
+
+# Node / Angular build output
+node_modules/
+dist/
+.angular/
+coverage/
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local environment and secret files
+.env
+.env.*
+!.env.example
+secrets.json
+
+# Logs and temporary files
+*.log
+*.tmp
